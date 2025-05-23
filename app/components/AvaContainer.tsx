@@ -61,7 +61,7 @@ const AvaContainer: React.FC = () => {
   }, [audioLevel]);
 
   return (
-    <div className="min-h-screen bg-gray-100/80 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
