@@ -287,7 +287,10 @@ const AvaVoiceBubble: React.FC<AvaVoiceBubbleProps> = ({
 
         {/* Control Bar - Only show when assistant is active (listening or speaking) */}
         {(bubbleState === 'listening' || bubbleState === 'speaking') && (
-        <div className="absolute bottom-[-70px] left-1/2 transform -translate-x-1/2 flex items-center gap-3 px-4 py-1 bg-white/15 backdrop-blur-md rounded-full border border-white/30 shadow-lg mt-4 z-30">
+        <motion.div // Use motion.div for potential future animations or consistent structure
+          className="absolute bottom-[-70px] left-1/2 transform -translate-x-1/2 flex items-center gap-3 px-4 py-1 bg-white/10 backdrop-blur-md rounded-full border border-white/30 shadow-lg mt-4 z-30" // Restored classes, adjusted opacity
+          style={{ pointerEvents: 'auto' }} // Ensure pointer events are received
+        >
           {/* Audio Visualizer Animation */}
           <div style={{ width: 48, height: 48 }}>
             <AudioVisualizer audioData={audioData} />
@@ -300,7 +303,7 @@ const AvaVoiceBubble: React.FC<AvaVoiceBubbleProps> = ({
           >
             <CloseIcon />
           </button>
-        </div>
+        </motion.div>
         )}
       </div>
     </div>
