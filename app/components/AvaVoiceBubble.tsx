@@ -289,7 +289,9 @@ const AvaVoiceBubble: React.FC<AvaVoiceBubbleProps> = ({
         {(bubbleState === 'listening' || bubbleState === 'speaking') && (
         <motion.div // Use motion.div for potential future animations or consistent structure
           className="absolute bottom-[-70px] left-1/2 transform -translate-x-1/2 flex items-center gap-3 px-4 py-1 bg-white/10 backdrop-blur-md rounded-full border border-white/30 shadow-lg mt-4 z-[999]" // Restored classes, adjusted opacity
-          style={{ pointerEvents: 'auto', touchAction: 'manipulation' }}
+          // style={{ pointerEvents: 'auto', touchAction: 'manipulation' }}
+          style={{ pointerEvents: 'auto', touchAction: 'none' }}   // <- disable scroll
+          onTouchStart={(e) => e.stopPropagation()}                // <- swallow that first touch
           >
           {/* Audio Visualizer Animation */}
           <div style={{ width: 48, height: 48 }}>
