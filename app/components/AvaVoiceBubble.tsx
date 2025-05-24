@@ -206,7 +206,7 @@ const AvaVoiceBubble: React.FC<AvaVoiceBubbleProps> = ({
 
           {/* Swirling, pulsing, wavy animated blue glow when speaking - uses random jitters */}
           {/* Explicitly tied to speaking state */}
-          {bubbleState === 'speaking' && (
+          {false && bubbleState === 'speaking' && ( // Temporarily disabled for debugging touch issue
             <motion.div
               className="absolute inset-[-40px] rounded-full blur-2xl pointer-events-none z-10"
               animate={{
