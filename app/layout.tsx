@@ -3,8 +3,8 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customer Service Training Simulator",
-  description: "An interactive training tool for customer service representatives, powered by AI.",
+  title: "AVA Voice Assistant Demo",
+  description: "Engage in a live, conversational voice experience with AVA—Amogh’s Virtual Assistant—right from the hero section of the site."
 };
 
 export default function RootLayout({
